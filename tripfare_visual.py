@@ -12,7 +12,7 @@ import numpy as np
 import pickle
 
 # Load your trained model (replace with your model path)
-brain = pickle.load(open('Fare.pkl', 'rb'))
+# brain = pickle.load(open('Fare.pkl', 'rb'))
 
 st.title("Taxi Fare Prediction App")
 
@@ -91,7 +91,7 @@ if st.button("Predict Fare"):
                           trip_duration_new]])
 
     # Dummy output for now (replace with model.predict(features))
-    prediction = brain.predict(features)[0]
-    # prediction = round(trip_distance_new * 2 + trip_duration_new * 0.5 + 5, 2)  # Dummy formula
+    # prediction = brain.predict(features)[0]
+    prediction = round(trip_distance_new * 2 + trip_duration_new * 0.5 + 5, 2)  # Dummy formula
 
     st.success(f"Predicted Total Amount: ${prediction}")
